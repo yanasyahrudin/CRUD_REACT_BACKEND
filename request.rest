@@ -1,0 +1,96 @@
+// create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Yana S",
+    "email": "admin@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+###
+// get all users
+GET http://localhost:5000/users
+
+###
+// get single user
+GET http://localhost:5000/users/47692783-7566-4753-84b0-1292cac852f2
+
+###
+// update a user
+PATCH http://localhost:5000/users/47692783-7566-4753-84b0-1292cac852f2
+Content-Type: application/json
+
+{
+    "name": "John Updated",
+    "email": "john@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+// delete a user
+DELETE http://localhost:5000/users/e688d35f-315a-4cbb-903c-d1eb012fb9b1
+
+###
+// login admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+###
+// login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "john@gmail.com",
+    "password": "123456"
+}
+
+###
+// me
+GET http://localhost:5000/me
+
+###
+// logout
+DELETE http://localhost:5000/logout
+
+###
+// get all items
+GET http://localhost:5000/items
+
+###
+// get single item
+GET http://localhost:5000/items/d2ee0f69-07df-469a-8849-72c0b6f877fc
+
+###
+// post data item
+POST http://localhost:5000/items
+Content-Type: application/json
+
+{
+    "name": "Item 6",
+    "price": 999
+}
+
+###
+// update data item
+PATCH http://localhost:5000/items/6bdb33b1-785d-4ec7-b2ea-04b06360fad9
+Content-Type: application/json
+
+{
+    "name": "Item Updated",
+    "price": 974
+}
+
+###
+// delete data item
+DELETE http://localhost:5000/items/d2ee0f69-07df-469a-8849-72c0b6f877fc
